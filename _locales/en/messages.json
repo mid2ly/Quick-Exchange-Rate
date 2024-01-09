@@ -1,13 +1,5 @@
 {
-  "title": {
-    "message": "This is a title",
-    "description": "The title of the extension page"
-  },
-  "content": {
-    "message": "Hello world!",
-    "description": "The content of the extension page"
-  },
   "toExchange": {
-    "message": "Convert selection to USD"
+    "message": "Convert selection to specific Currency"
   }
 }
