@@ -33,12 +33,19 @@ const currencies = {
 }
 
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.contextMenus.create({
-        id: "openSidePanel",
-        title: chrome.i18n.getMessage('toExchange'),
-        contexts:["selection"],
-    })
+  chrome.contextMenus.create({
+      id: "openSidePanel",
+      title: chrome.i18n.getMessage('toExchange'),
+      contexts:["selection"],
   })
+})
+
+chrome.action.onClicked.addListener(() => {
+    chrome.tabs.create({
+      url: 'https://middly.sh',
+      active: true,
+    });
+})
 
 let from = "EUR"
 let amount = 0
